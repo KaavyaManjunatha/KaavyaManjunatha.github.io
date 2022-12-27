@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Kavya Resume
+        </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <style>
+            .move_right{
+                position: relative;
+                animation-name: move_right_keyframes;
+                animation-duration: 1s;
+            }
+
+            /* @keyframes move_right_keyframes {
+                from {left: -100%;}
+                to {left: 0%;}
+            } */
+        </style>
+    </head>
+    <body onload="loadPage()">
+        <div class="d-flex move_right mt-4 p-5 bg-primary text-white">
+            <div class="col">
+                <h1>Kavya Hosaholalu Manjunatha</h1>
+                <p><a style="color: white;" href="mailto:kavya.hosaholalumanjunatha@sjsu.edu">kavya.hosaholalumanjunatha@sjsu.edu</a> 
+                    <br>+1(619)-759-9639 <br> 
+                    <a style="color: white;" href="https://www.linkedin.com/in/kavyamanjunatha/">LinkedIn-Kavya</a>
+                    <br>Open to work immediately (H4 EAD)</p>
+            </div>
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <a class="nav-link active" target="_blank" aria-current="page" href="./../assets/Kavya_RESUME.pdf"><img src="../assets/images/download.svg" width="64" height="64"/></a>
+            </div>
+        </div>
+        <div class="row flex-nowrap">
+            <div class="move_right col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link align-middle px-0" onclick="changeResume('edu')">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Education</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle" onclick="changeResume('exp')">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Experience</span> </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle" onclick="changeResume('pro')">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Projects</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle " onclick="changeResume('ski')">
+                                <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Skills</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 align-middle" onclick="changeResume('cert')">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Certificates</span> </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    
+                </div>
+            </div>
+            <div class="col py-5">
+                <div class="lead" id="section">
+                                                                                                                                                                                                                                                                                       
+                </div>
+            </div>
+        </div>
+        <script>
+            function loadPage(){
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                changeResume(urlParams.get('section'))
+            }
+            function changeResume(section){
+                const section_div = document.getElementById('section')
+                switch(section){
+                    case 'edu': section_div.innerHTML = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>
+                                    <h3>Education</h3>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold;">
+                                    San Jose State University
+                                </td>
+                                <td style="text-align: right;">
+                                    California, USA
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Master of Science in Industrial/ Engineering Management
+                                </td>
+                                <td style="text-align: right;">
+                                    Jan 2022-Present
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <span style="font-weight: bold;">Coursework</span>: Decision and Data science, Operations Data Analysis, Data Mining, Data Visualization, Financial method for Engineers, Six sigma
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">
+                                    Visvesvaraya Technological University
+                                </td>
+                                <td style="text-align: right;">
+                                    Karnataka, India
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Electronics and Communication
+                                </td>
+                                <td style="text-align: right;">
+                                    Aug 2013 – May 2017
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    `; break;
+                    case 'exp':section_div.innerHTML = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>
+                                    <h3>Experience</h3>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold;">
+                                    MLK Ventures LLP (Data Analyst), India                                                                                          
+                                </td>
+                                <td style="text-align: right;">
+                                    Nov 2017 - Dec 2018
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <ul>
+                                        <li>Designed an interactive dashboard to display business key performance indicators (KPI's); so, end user can filter KPI's based on required parameters.</li>
+                                        <li>Segmented sales territories using K-Means Clustering to devise appropriate region-wise strategies. </li>
+                                        <li>Developed performance metrics while cleaning and validating SQL for large datasets, thus improving classification/grouping by an accuracy greater than 90%.</li>
+                                        <li>Identified factors that were predictive of good sales and deals by leveraging historic sales related data, applied logistic regression to predict good deals with an accuracy of 81%.</li>
+                                        <li>forecasted demand for the subsequent year, evaluating various KPIs to Improved Regression model.</li>
+                                        <li>Created weekly and monthly status reports with Pivot Tables and Trend Charts to provide understanding of the project to stakeholders.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    `;break;
+                    case 'pro':section_div.innerHTML = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>
+                                    <h3>Projects</h3>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan='2'>
+                                    <span style="font-weight: bold;">
+                                    Data Analysis on College Major Data set in R:
+                                    </span>
+                                    <ul>
+                                        <li>Visualized which college major graduate is receiving the highest pay after graduation and which major has the highest number of enrollments, by extracting the appropriate information. </li>
+                                        <li>Performed Exploratory Data analysis (categorical and numerical), Hypothesis testing, Principal component analysis.</li>
+                                        <li>Performed the linear regression and logical regression by grouping to find the trend of employment.</li>
+                                        <li>Performed k- mean clustering in addition to some other machine learning concept to visualize the data.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>
+                                    <span style="font-weight: bold;">
+                                    Amazon Fine Food Reviews Analysis in Python:
+                                    </span>
+                                    <ul>
+                                        <li>Extracted, cleaned, performed several operations like EAD to identify the most valuable and least rated product.</li>
+                                        <li>Used various word embeddings including Bag of Words, TF – IDF, Word2vec to get the vectors. Sentimental analysis is performed using Machine Learning techniques</li>
+                                        <li>In addition, clustering was performed on reviews and generated clusters were examined.</li>
+                                        <li>Used the loss function sparse categorical entropy and applied encoder-decoder models where the LSTM layers are stacked for better sequence representation.</li>
+                                        <li>Monitored the validation loss and applied early stopping so that the neural training stops at right time. The validation loss is reduced from 2.85 to 1.85 after 20 epochs.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>
+                                    <span style="font-weight: bold;">
+                                    Yelp Data set challenge Big Data (SparkSQL, PySpark, NoSQL):
+                                    </span>
+                                    <ul>
+                                        <li>Performed data wrangling over 8 million reviews running SQL queries on databricks with applying CoNVOs framework. Compared             elite and non-elite reviews for voter count using Box-whisker Plot, Stacked Bar graphs in Tableau.</li> 
+                                        <li>Identified Elite users with 35% of total users.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    `;break;
+                    case 'ski':section_div.innerHTML = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>
+                                    <h3>Skills</h3>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan='2'>
+                                    
+                                    <ul>
+                                        <li>Python, R, C, MySQL, Tableau, Microsoft Power BI, Advanced Excel.</li>
+                                        <li>Tools Libraries & Visualization: Pandas, NumPy, Matplotlib, Scikit learn, seaborn, GGPlot, Tensorflow, natural language processing, OpenCV, seaborn, Pivot table, Keras, Visual studio, PySpark, Oracle, Spotfire.</li>
+                                        <li>Statistical analysis techniques/ tools: SAP, rational databases, data manipulation, ad hoc reports, data cleaning, data processing. Logical regression, linear regression </li>
+                                        <li>Other interests: Oracle, Portfolio management, Supply chain, ERP, Pycharm, Matlab </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    `;break;
+                    case 'cert':section_div.innerHTML = `
+                    <table style='table-layout: fixed; word-wrap: break-word;'>
+                        <thead>
+                            <tr>
+                                <td>
+                                    <h3>Ceertificates</h3>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class='col'>
+                                    Tableau Essential Training (2021)
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    Issued Dec 2022
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    <a href='https://www.linkedin.com/learning/certificates/6ea3b70142f371198f5c8f652442dfdcd6cdbb1ef03947f6043bff271d2ee381' target='_blank'>Show Certificate</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class='col'>
+                                    Google Data Analytics
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    Issued Sep 2022
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    <a href='https://www.coursera.org/account/accomplishments/professional-cert/FFBMRNP6SPKZ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof'>Show Certificate</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class='col'>
+                                    Python for Data Analysis and Visualization
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    Issued Sep 2022
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    <a href='https://udemy-certificate.s3.amazonaws.com/pdf/UC-547ec6ae-1c11-470a-80a4-7d654a5702d5.pdf'>Show Certificate</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class='col'>
+                                    Python
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    Issued Aug 2021
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    <a href='https://www.udemy.com/certificate/UC-5c6379c1-160e-4e7f-886c-959ea20aaa11/'>Show Certificate</a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class='col'>
+                                    SQL Essential Training
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    Issued Jul 2022
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    <a href='https://www.linkedin.com/learning/certificates/3306ae44085d48533fb2b0cf085da545066b250b09c3150213748804cb551b2f?trk=share_certificate'>Show Certificate</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class='col'>
+                                    Supply chain demand planning
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    Issued Jun 2022
+                                </td>
+                                <td class='col-4' style='padding-left:20px;'>
+                                    <a href='https://udemy-certificate.s3.amazonaws.com/image/UC-f3c411ee-46db-4bd1-8a05-f40e13dcff27.jpg?v=1656116309000'>Show Certificate</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    `;break;
+                }
+            }
+        </script>
+    </body>
+</html>
